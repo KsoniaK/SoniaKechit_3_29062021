@@ -1,0 +1,51 @@
+/* SMARTPHONE */
+/* SHIFT + ALT + A = COMMENTAIRE */
+
+@font-face{
+    font-family: Shrikhand, Roboto;
+    src: url(../fonts/Shrikhand/Shrikhand-Regular.ttf);
+    src: url(../fonts/Roboto/Roboto-Thin.ttf)
+}
+
+/* LE RESET */
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 1.6rem;
+    margin: 0;
+    font-family: "Roboto", serif;
+    z-index: 1;
+    font-size: 16px;
+}
+h2{
+    font-family: "Shrikhand", serif;
+}
+
+/* ICI LE HEADER */
+/* FIN DU HEADER */
+
+/* ICI LE MAIN */
+/* FIN DU MAIN */
+
+/* ICI LE FOOTER */
+/* FIN DU MAIN */
+
+
+
+
+
+
+
+/* TABLETTE*/
+@media screen and (min-width: 481px){
+    /* ICI LE HEADER */
+    /* FIN DU HEADER */
+
+    /* ICI LE MAIN */
+    /* FIN DU MAIN */
+
+    /* ICI LE FOOTER */
+    /* FIN DU MAIN */
+
+}

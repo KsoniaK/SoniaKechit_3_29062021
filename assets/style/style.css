@@ -1,0 +1,14 @@
+@import url("mediaqueries.css");
+
+ /* ORDINATEUR*/
+ @media (min-width: 1025px){
+    /* ICI LE HEADER */
+    /* FIN DU HEADER */
+
+    /* ICI LE MAIN */
+    /* FIN DU MAIN */
+
+    /* ICI LE FOOTER */
+    /* FIN DU MAIN */
+
+ }
