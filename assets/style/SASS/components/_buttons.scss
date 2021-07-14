@@ -1,0 +1,16 @@
+//BOUTON PAGE ACCUEIL
+button{
+    @include border(yellow);
+    display: block;
+    margin: auto;
+    height: 7vh;
+    width: 60%;
+    @include box_shadow;
+    border-radius: 2rem;
+    font-size: .9rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: $primary_bright_color;
+    background-image: linear-gradient(#da79d5, #9e61d4);
+    font-weight: normal;
+}

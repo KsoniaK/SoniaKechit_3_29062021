@@ -1,0 +1,26 @@
+//HEADER DE LA PAGE D'ACCUEIL
+header{
+    @include border
+}
+.logo{
+    @include border(violet);
+    @include DisplayF_justifyCC;
+    & img{
+        padding: $padding_standard;
+        width: 12rem;
+    }
+}
+.localisation{
+    @include border(orange);
+    @include DisplayF_justifyCC;
+    background-color: $bgc_localisation;
+    align-items: center;
+    box-shadow: 5px 0px 5px gray;
+    & p{
+        color: #3f3f3f;
+    }
+    & i{
+        padding-right: $padding_standard;
+    }
+}
+

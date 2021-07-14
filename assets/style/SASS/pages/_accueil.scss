@@ -1,0 +1,112 @@
+//LE MAIN
+main{
+    @include border(red);
+}
+.titres{
+    @include border(grey);
+    background-color: $bgc_titres-button-restaurants;
+    text-align: center;
+    padding: $padding_standard;
+    & h1{
+        font-size: 1.5rem;
+        margin-bottom: $margin_standard;
+        margin-top: 2rem;
+    }
+    & h2{
+        font-size: 1.1rem;
+        font-weight: normal;
+        color: gray;
+        margin-bottom: 2rem;
+    }
+}
+//FONCTIONNEMENT
+.fonctionnement{
+    @include border(green);
+    padding-bottom: 3rem;
+    & h2{
+        padding: $padding_standard;
+    }
+    &__etapes{
+        display: flex;
+        background-color: $bgc_titres-button-restaurants;
+        border-radius: 1rem;
+        margin: 1.5rem;
+        align-items: center;
+        @include box_shadow;
+        height: 10vh;
+
+        &:hover{
+            background-color: #f4edfe;
+        }
+        & span{
+            @include DisplayF_justifyCC;
+            margin-right: 1.5rem;
+            margin-left: -0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            align-items: center;
+            border-radius: 10rem;
+            background-color: #8b59d5;
+            color: $primary_bright_color;
+        }
+        & i{
+            margin-right: 1.5rem;
+            color: gray;
+            &:hover{
+                color: #8b59d5;
+            }
+        }
+    }
+}
+//RESTAURANTS
+.restaurants{
+    @include border(lightpink);
+    background-color: $bgc_titres-button-restaurants;
+    padding-bottom: 3rem;
+    & a{
+        text-decoration: none;
+        color: $primary_dark_color;
+    }
+    & h2{
+        padding: $padding_standard;
+    }
+    &__carte{
+        border-radius: 1rem;
+        background-color: $primary_bright_color;
+        margin: $margin_standard;
+        @include box_shadow;
+        &-img img{
+            width: 100%;
+            border-radius: 1rem 1rem 0rem 0rem;
+            height: 24vh;
+            object-fit: cover;
+        }
+        &-nom{
+            display: flex;
+            justify-content: space-between;
+            padding-top: .5rem;
+            padding-left: $padding_standard;
+            padding-right: $padding_standard;
+            & h3{
+                margin: 0;
+                font-size: 1rem;
+            }
+            & h4{
+                margin-top: .5rem;
+                margin-bottom: $margin_standard;
+                font-weight: lighter;
+            }
+        }
+        &-favoris{
+            display: flex;
+            align-items: center;
+            & i{
+                color: $primary_dark_color;
+            }
+            &:hover{
+                filter: invert(45%) sepia(38%) saturate(2274%) hue-rotate(238deg) brightness(90%) contrast(83%);
+            }
+        }
+    }
+}
+//FIN DU MAIN
