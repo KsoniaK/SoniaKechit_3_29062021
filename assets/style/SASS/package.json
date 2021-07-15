@@ -1,0 +1,22 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "projet 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+     "sass": "sass --watch ./style.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "SoniaKechit_3_29062021"
+  },
+  "keywords": [
+    "restaurant",
+    "menu",
+    "à",
+    "composer",
+    "localisation"
+  ],
+  "author": "sonia",
+  "license": "ISC"
+}

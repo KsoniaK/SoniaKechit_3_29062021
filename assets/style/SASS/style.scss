@@ -9,8 +9,6 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/accueil";
-@import "./pages/menu";
+@import "./pages/menus";
 
-//sass --watch .:. --style compressed
-
-// sass ./style.scss:./stylecss -w 
+//lancer sass (compilation) : npm run sass
