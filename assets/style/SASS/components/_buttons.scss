@@ -11,6 +11,30 @@ button{
     font-weight: bold;
     margin-bottom: 3rem;
     color: $primary_bright_color;
-    background-image: linear-gradient(#da79d5, #9e61d4);
-    font-weight: normal;
+    background: $bgc_button_hover;
+    position: relative;
+    z-index: 1;
+    &:hover{
+        &::after{
+            opacity: 1;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;  
+        left: 0;
+        background-color: lighten(#da79d5, 5);
+        box-shadow: 5px 3px 10px 0px grey;
+        border-radius: 2rem;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+    & a{
+        text-decoration: none;
+        color: $primary_bright_color;
+    }
 }

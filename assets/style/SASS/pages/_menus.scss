@@ -1,0 +1,64 @@
+//MAIN DE LA PAGE MENUS
+main{
+    @include border(orange)
+}
+.illustration{
+    @include border(hotpink);
+    & img{
+        width: 100%
+    }
+}
+.menu{
+    @include border(green);
+    background-color: $bgc_titres-button-restaurants;
+    border-radius: 2rem 2rem 0rem 0rem;
+    padding: $standard;
+    position: relative;
+    bottom: 40px;
+    & button{
+        margin-top: 3rem;
+        & a{
+            text-decoration: none;
+            color: $primary_bright_color;
+        }
+    }
+    &__titre{
+        @include DF_JCC_AIC;
+    }
+    &__description{
+        @include border (brown);
+        &-titre{
+            & h3{
+                margin-bottom: $nul;
+                font-weight: normal;
+            }
+        }
+        &-titre hr{
+            border: none;
+            height: 4px;
+            background-color: #a9e0d1;
+            width: 15%;
+            position: relative;
+            right: 9rem;
+        }
+        &-card{
+            @include border (yellow);
+            border-radius: $standard;
+            @include box_shadow;
+            margin-bottom: $standard;
+            background-color: $primary_bright_color;
+            & h4{
+                margin: 0.5rem;
+                margin-left: $nul;
+            }
+                &-prix{
+                @include border (hotpink);
+                @include DF_JCS-A;
+                    & p{
+                    margin: 0.5rem;
+                    margin-left: $nul;
+                    }
+                }
+        }   
+    }
+}

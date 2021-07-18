@@ -6,10 +6,10 @@ main{
     @include border(grey);
     background-color: $bgc_titres-button-restaurants;
     text-align: center;
-    padding: $padding_standard;
+    padding: $standard;
     & h1{
         font-size: 1.5rem;
-        margin-bottom: $margin_standard;
+        margin-bottom: $standard;
         margin-top: 2rem;
     }
     & h2{
@@ -24,7 +24,7 @@ main{
     @include border(green);
     padding-bottom: 3rem;
     & h2{
-        padding: $padding_standard;
+        padding: $standard;
     }
     &__etapes{
         display: flex;
@@ -68,12 +68,12 @@ main{
         color: $primary_dark_color;
     }
     & h2{
-        padding: $padding_standard;
+        padding: $standard;
     }
     &__carte{
-        border-radius: 1rem;
+        border-radius: $standard;
         background-color: $primary_bright_color;
-        margin: $margin_standard;
+        margin: $standard;
         @include box_shadow;
         &-img img{
             width: 100%;
@@ -81,19 +81,35 @@ main{
             height: 24vh;
             object-fit: cover;
         }
+        // &-img img:last-child{
+        //     width: 25%;
+        //     height: 4vh;
+        //     position: relative;
+        //     bottom: 10.5rem;
+        //     left: 15rem;
+        //     border-radius: 0;
+        // }
+        // .restaurants__carte-img-nouveaute{
+        //     width: 25%;
+        //     height: 4vh;
+        //     position: relative;
+        //     bottom: 10.5rem;
+        //     left: 15rem;
+        //     border-radius: 0;
+        // }
         &-nom{
             display: flex;
             justify-content: space-between;
             padding-top: .5rem;
-            padding-left: $padding_standard;
-            padding-right: $padding_standard;
+            padding-left: $standard;
+            padding-right: $standard;
             & h3{
                 margin: 0;
                 font-size: 1rem;
             }
             & h4{
                 margin-top: .5rem;
-                margin-bottom: $margin_standard;
+                margin-bottom: $standard;
                 font-weight: lighter;
             }
         }
@@ -101,7 +117,7 @@ main{
             display: flex;
             align-items: center;
             & i{
-                color: $primary_dark_color;
+                color: $primary_dark_color; 
             }
             &:hover{
                 filter: invert(45%) sepia(38%) saturate(2274%) hue-rotate(238deg) brightness(90%) contrast(83%);

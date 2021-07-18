@@ -27,8 +27,27 @@ button {
   font-weight: bold;
   margin-bottom: 3rem;
   color: white;
-  background-image: linear-gradient(#da79d5, #9e61d4);
-  font-weight: normal; }
+  background: linear-gradient(#da79d5, #9e61d4);
+  position: relative;
+  z-index: 1; }
+  button:hover::after {
+    opacity: 1; }
+  button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #e08ddb;
+    box-shadow: 5px 3px 10px 0px grey;
+    border-radius: 2rem;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms; }
+  button a {
+    text-decoration: none;
+    color: white; }
 
 header {
   border: 2px solid blue; }
@@ -52,6 +71,18 @@ header {
     color: #3f3f3f; }
   .localisation i {
     padding-right: 1rem; }
+
+.nav {
+  border: 2px solid purple;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  align-items: center; }
+  .nav img {
+    width: 12rem; }
+  .nav i {
+    position: relative;
+    right: 4rem; }
 
 footer {
   border: 2px solid blue;
@@ -166,5 +197,58 @@ main {
         color: black; }
       .restaurants__carte-favoris:hover {
         filter: invert(45%) sepia(38%) saturate(2274%) hue-rotate(238deg) brightness(90%) contrast(83%); }
+
+main {
+  border: 2px solid orange; }
+
+.illustration {
+  border: 2px solid hotpink; }
+  .illustration img {
+    width: 100%; }
+
+.menu {
+  border: 2px solid green;
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0rem 0rem;
+  padding: 1rem;
+  position: relative;
+  bottom: 40px; }
+  .menu button {
+    margin-top: 3rem; }
+    .menu button a {
+      text-decoration: none;
+      color: white; }
+  .menu__titre {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .menu__description {
+    border: 2px solid brown; }
+    .menu__description-titre h3 {
+      margin-bottom: 0rem;
+      font-weight: normal; }
+    .menu__description-titre hr {
+      border: none;
+      height: 4px;
+      background-color: #a9e0d1;
+      width: 15%;
+      position: relative;
+      right: 9rem; }
+    .menu__description-card {
+      border: 2px solid yellow;
+      border-radius: 1rem;
+      box-shadow: 5px 3px 10px 0px lightgray;
+      margin-bottom: 1rem;
+      background-color: white; }
+      .menu__description-card h4 {
+        margin: 0.5rem;
+        margin-left: 0rem; }
+      .menu__description-card-prix {
+        border: 2px solid hotpink;
+        display: flex;
+        justify-content: space-between; }
+        .menu__description-card-prix p {
+          margin: 0.5rem;
+          margin-left: 0rem; }
 
 /*# sourceMappingURL=style.css.map */

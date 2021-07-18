@@ -6,7 +6,7 @@ header{
     @include border(violet);
     @include DisplayF_justifyCC;
     & img{
-        padding: $padding_standard;
+        padding: $standard;
         width: 12rem;
     }
 }
@@ -20,7 +20,22 @@ header{
         color: #3f3f3f;
     }
     & i{
-        padding-right: $padding_standard;
+        padding-right: $standard;
+    }
+}
+
+//LE HEADER DES PAGES MENU
+.nav{
+    @include border(purple);
+    @include DisplayF_justifyCC;
+    padding: $standard;
+    align-items: center;
+    & img{
+        width: 12rem;
+    }
+    & i{
+        position: relative;
+        right: 4rem;
     }
 }
 
