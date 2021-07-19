@@ -13,7 +13,7 @@ button{
     color: $primary_bright_color;
     background: $bgc_button_hover;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     &:hover{
         &::after{
             opacity: 1;

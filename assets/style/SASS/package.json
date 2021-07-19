@@ -4,7 +4,8 @@
   "description": "projet 3 ohmyfood",
   "main": "index.js",
   "scripts": {
-     "sass": "sass --watch ./style.scss:./style.css"
+     "sass": "sass --watch ./style.scss:./style.css",
+     "prefix": "postcss ./style.css --use autoprefixer -d ./style/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,6 @@
     "localisation"
   ],
   "author": "sonia",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 4 versions"
 }
