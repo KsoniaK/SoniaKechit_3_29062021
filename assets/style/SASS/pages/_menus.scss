@@ -49,11 +49,24 @@ main{
             right: 9rem;
         }
         &-card{
+            transition: ajout 2s;
             @include border (yellow);
             border-radius: $standard;
             @include box_shadow;
             margin-bottom: $standard;
             background-color: $primary_bright_color;
+            padding-left: .8rem;
+            &:hover{
+                margin-right:60px;
+                // animation: menu__selection 3s ease-in-out 0s 1 normal forwards;
+                // transform: translateX(-50px);
+                // margin-left:-30px;
+                // transform: scaleX(80%);
+                // transform: skew(10deg, 20deg);
+                // transform: translate(0px, 20%);
+                // transform: rotate(0.5turn) ;
+                // transform: scale(1) translate(-20%);
+            }
             & h4{
                 margin: 0.5rem;
                 margin-left: $nul;
@@ -69,3 +82,4 @@ main{
         }   
     }
 }
+
