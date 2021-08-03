@@ -49,6 +49,23 @@ button {
     text-decoration: none;
     color: white; }
 
+.apparition_un {
+  opacity: 0;
+  animation: apparition 0.5s linear forwards 0.5s; }
+
+.apparition_deux {
+  opacity: 0;
+  animation: apparition 0.5s linear forwards 0.7s; }
+
+.apparition_trois {
+  opacity: 0;
+  animation: apparition 0.5s linear forwards 0.9s; }
+
+@keyframes apparition {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 header {
   border: 2px solid blue; }
 
@@ -199,20 +216,28 @@ main {
         margin-bottom: 1rem;
         font-weight: lighter; }
     .restaurants__carte-favoris {
+      position: relative;
       display: flex;
       align-items: center; }
-      .restaurants__carte-favoris-ajout {
-        color: #FFF;
-        background-color: #000;
-        border-radius: 50%;
-        padding: .2em; }
-        .restaurants__carte-favoris-ajout::before {
-          content: "\f004";
-          font-weight: bold;
-          transition: color 1s ease-out; }
-        .restaurants__carte-favoris-ajout:hover::before {
-          color: #da79d5;
-          cursor: pointer; }
+      .restaurants__carte-favoris .similar {
+        font-size: 25px;
+        position: absolute;
+        right: 0px;
+        top: 10px; }
+      .restaurants__carte-favoris:hover .plein {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 1s; }
+      .restaurants__carte-favoris:hover .vide {
+        opacity: 0;
+        transition: opacity 0.3s; }
+      .restaurants__carte-favoris .plein {
+        transition: all 1s;
+        background: #8b59d5;
+        opacity: 0;
+        transform: translateY(15px);
+        background-clip: text;
+        color: #8b59d5; }
 
 main {
   border: 2px solid orange; }

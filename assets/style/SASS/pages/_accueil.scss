@@ -107,24 +107,44 @@ main{
         }
         // COEUR FAVORIS
         &-favoris{
+            // ICI PAS INDISPENSABLE MAIS LE METTRE POUR RAPPEL
+            position: relative;
             display: flex;
             align-items: center;
-            &-ajout{
-                color: #FFF;
-                background-color: #000;
-                border-radius: 50%;
-                padding:.2em;
-                &::before{
-                    content: "\f004";
-                    font-weight: bold;
-                    transition: color 1s ease-out;
+            .similar{
+                font-size: 25px;
+                // ON SUPPERPOSE LES 2 COEURS. DIV PARENT = restaurants__carte-favoris
+                position: absolute;
+                right: 0px;
+                top: 10px;
+            }
+            &:hover {
+                .plein{
+                    opacity: 1;
+                    // AXE Y (HAUT/BAS)
+                    transform: translateY(0);
+                    // ALL POUR TOUS LES EFFETS APPLIQUES
+                    transition: all 1s;
                 }
-                &:hover::before{
-                    color: #da79d5;
-                    cursor: pointer;
-                }
+                .vide{
+                        opacity: 0;
+                        // ON JOUE SUR LA PROPRIETE OPACITE
+                        transition: opacity 0.3s ;
+                    }
+            }
+            .plein{
+                transition: all 1s;
+                background: rgb(139,89,213);
+                // background: linear-gradient(90deg, rgba(139,89,213,1) 0%, rgba(139,89,213,1) 35%, rgba(0,212,255,1) 100%);
+                opacity: 0;
+                transform: translateY(15px);
+                background-clip: text;
+                color: #8b59d5;
+                
+
             }
         }
+
     }
 }
 //FIN DU MAIN

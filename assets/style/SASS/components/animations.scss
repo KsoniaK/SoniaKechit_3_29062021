@@ -52,7 +52,26 @@
 //     }
 //   }
 
-// COEUR FAVORIS
+// APPARITION PROGRESSIVE ENTREE + PLAT + DESSERT
+.apparition_un{
+  opacity:0;
+  animation: apparition 0.5s linear forwards 0.5s;
+}
+.apparition_deux{
+  opacity:0;
+  animation: apparition 0.5s linear forwards 0.7s;
+}
+.apparition_trois{
+  opacity:0;
+  animation: apparition 0.5s linear forwards 0.9s;
+}
+@keyframes apparition {
+ 0%  {opacity:0;}
+ 100% {opacity:1;}
+}
+
+
+
 
 
 
