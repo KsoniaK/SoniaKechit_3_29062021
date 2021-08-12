@@ -272,7 +272,7 @@ main {
     justify-content: space-around;
     align-items: center; }
   .menu__description {
-    border: 2px solid brown; }
+    width: 100%; }
     .menu__description-titre h3 {
       margin-bottom: 0rem;
       font-weight: normal; }
@@ -283,136 +283,68 @@ main {
       width: 15%;
       position: relative;
       right: 9rem; }
-    .menu__description-card {
-      transition: ajout 2s;
-      border: 2px solid yellow;
-      border-radius: 1rem;
-      box-shadow: 5px 3px 10px 0px lightgray;
-      margin-bottom: 1rem;
-      background-color: white;
-      padding-left: .8rem; }
-      .menu__description-card h4 {
-        margin: 0.5rem;
-        margin-left: 0rem; }
-      .menu__description-card-content {
-        border: 2px solid black;
-        display: flex; }
-        .menu__description-card-content:hover {
-          width: 80%; }
-        .menu__description-card-content-details {
-          border: 2px solid red;
-          width: 100%;
-          border-radius: 0rem 1rem 1rem 0rem; }
-          .menu__description-card-content-details-price {
-            border: 2px solid hotpink;
-            display: flex;
-            justify-content: space-between;
-            border-radius: 0rem 0rem 1rem 0rem; }
-            .menu__description-card-content-details-price p {
-              margin: 0.5rem;
-              margin-left: 0rem; }
-        .menu__description-card-content-validation {
-          border: 2px solid green;
-          background-color: #a9e0d1;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 0rem 1rem 1rem 0rem;
-          position: absolute;
-          width: 18%;
-          height: 10vh;
-          left: 286px;
-          opacity: 0; }
-          .menu__description-card-content-validation:hover {
-            opacity: 1;
-            animation: slidein 1s ease-in-out 0s 1 normal forwards;
-            transform: translateX(0px);
-            transition: all 1s; }
-@keyframes slidein {
-  0% {
-    width: 0%; }
-  100% {
-    width: 18%; } }
-          .menu__description-card-content-validation i {
-            background-color: white;
-            border-radius: 1rem;
-            padding: 0.2rem;
-            color: #a9e0d1; }
-            .menu__description-card-content-validation i:hover {
-              transform: rotate(1turn);
-              transition: all 1s; }
 
-.container {
-  display: flex;
-  justify-content: center; }
-
-.button {
-  background-color: purple;
-  color: yellow;
+.menu__description-card {
+  width: 100%;
+  margin: 1rem 0;
+  box-shadow: 0 5px 11px 0 #7c7a7a;
   border-radius: 1rem;
-  padding: 1rem;
-  width: 60%;
-  margin: 1rem;
-  text-align: center;
-  transform: scale(1);
-  transition: transform 400ms;
-  transition-delay: 400ms; }
-  .button:hover {
-    transform: scale(1.15); }
-
-.container-card {
-  background-color: #fff;
-  width: 80%;
-  display: flex;
-  box-shadow: 0 5px 11px 0 #b4b4b4;
-  margin: 2rem 1rem;
-  border-radius: 0rem 1rem 1rem 0rem; }
-  .container-card .card-left {
-    width: 65%;
-    background-color: #b3aef8; }
-    .container-card .card-left p {
-      font-weight: bold; }
-    .container-card .card-left p, .container-card .card-left .card-description {
-      width: 100%;
+  display: flex; }
+  .menu__description-card-details {
+    padding-left: 1rem;
+    width: 80%;
+    transition: .8s all ease-in-out; }
+    .menu__description-card-details h4 {
       overflow: hidden;
       white-space: nowrap;
-      text-overflow: ellipsis; }
-  .container-card .card-right {
-    display: flex;
-    align-items: flex-end;
-    width: 35%;
-    overflow: hidden;
-    background-color: #fabaf5;
-    border-radius: 0rem 1rem 1rem 0rem; }
-    .container-card .card-right .card-price {
-      transition: 1s ease-in-out;
-      transform: translateX(100%); }
-    .container-card .card-right .card-container-bar {
-      background-color: #96e0ce;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0 8px  8px 0;
-      transform: translateX(100%);
-      transition: 1s ease-in-out; }
-      .container-card .card-right .card-container-bar .card-container-check i {
-        color: #fff; }
-  .container-card:hover .card-right .card-container-bar {
+      text-overflow: ellipsis;
+      margin-bottom: 0; }
+    .menu__description-card-details p {
+      overflow: visible;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-top: 0.5rem; }
+  .menu__description-card:hover .card-right .container-check {
     transform: translateX(0); }
-  .container-card:hover .card-left p, .container-card:hover .card-left .card-description {
-    transition: 1s ease-in-out;
-    width: 90%; }
-  .container-card:hover .card-right .card-price {
+  .menu__description-card:hover .card-right .card-price {
     transform: translateX(0); }
-  .container-card:hover i {
-    animation: spin 1s infinite; }
-
+  .menu__description-card:hover .menu__description-card-details {
+    width: 70%; }
+  .menu__description-card:hover .menu__description-card-details p, .menu__description-card h4 {
+    overflow: hidden; }
+  .menu__description-card:hover .card-right {
+    width: 30%; }
+  .menu__description-card:hover .card-right .container-check .check i {
+    animation: spin 1s; }
 @keyframes spin {
   from {
     transform: rotateZ(0); }
   to {
-    transform: rotateZ(360deg); } }
+    transform: rotateZ(720deg); } }
+  .menu__description-card .card-right {
+    width: 20%;
+    display: flex;
+    align-items: end;
+    overflow: hidden;
+    transition: .8s all ease-in-out; }
+  .menu__description-card .card-price {
+    transform: translateX(100%);
+    transition: .8s all ease-in-out; }
+  .menu__description-card .container-check {
+    width: 100%;
+    display: flex;
+    background-color: #a9e0d1;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    border-radius: 0rem 1rem 1rem Orem;
+    transform: translateX(100%);
+    transition: .8s all ease-in-out;
+    border-radius: 0rem 1rem 1rem 0rem; }
+  .menu__description-card i {
+    border-radius: 1rem;
+    background-color: white;
+    padding: .3rem;
+    color: #a9e0d1; }
 
 /*# sourceMappingURL=style.css.map */

@@ -33,7 +33,8 @@ main{
         @include DF_JCC_AIC;
     }
     &__description{
-        @include border (brown);
+        width: 100%;
+        // @include border (brown);
         &-titre{
             & h3{
                 margin-bottom: $nul;
@@ -48,261 +49,208 @@ main{
             position: relative;
             right: 9rem;
         }
-        &-card{
-            transition: ajout 2s;
-            @include border (yellow);
-            border-radius: $standard;
-            @include box_shadow;
-            margin-bottom: $standard;
-            background-color: $primary_bright_color;
-            padding-left: .8rem;
-            & h4{
-                margin: 0.5rem;
-                margin-left: $nul;
-            }
-            &-content{
-                @include border (black);
-                display: flex;
-                &:hover{
-                    width: 80%;
-                    // animation: slidein 1s ease-in-out 0s 1 normal forwards;
-                //     animation: slidein 1s ease-in-out 0s 1 normal forwards;
-
-                //           @keyframes slidein {
-                //             0% {
-                //                 width: 100%;
-                //             }
-                //             50% {
-                //                 width: 90%;
-                //             }
-                //             100% {
-                //                 width: 80%;
-                //             }
-                //           }
-                // }
-                // &:hover:first-child{
-                //     width: 80%;
-                //     opacity: 1;
-                // }
-                // &:hover:nth-child(n){
-                //     opacity: 1;
-                }
-                &-details{
-                    @include border(red);
-                    width: 100%;
-                    border-radius: 0rem 1rem 1rem 0rem;
-                    // &:hover{
-                    //     width: 80%
-                    // }
-                    &-price{
-                        @include border (hotpink);
-                        @include DF_JCS-A;
-                        border-radius: 0rem 0rem 1rem 0rem;
-                            & p{
-                            margin: 0.5rem;
-                            margin-left: $nul;
-                            }
-                            
-                    }
-
-                }
-                &-validation{
-                    @include border (green);
-                    background-color: #a9e0d1;
-                    @include DisplayF_justifyCC;
-                    align-items: center;
-                    border-radius: 0rem 1rem 1rem 0rem;
-                    position: absolute;
-                    // top: 120px;
-                    width: 18%;
-                    height: 10vh;
-                    left: 286px;
-                    opacity: 0;
-                        &:hover{
-                            opacity: 1;
-                            // transform-origin: left;
-                            // width: 20%;
-                            // height: 11vh;
-                            // animation-name: slidein ;
-                            // animation-duration: 2s;
-        
-                            // @keyframes example {
-                            //         0%   {right:0;}
-                            //         50%  {right:40px;}
-                            //         100% {right:0;}
-                            //         }
-                           
-                            // ESSAI keyframe
-                        //     animation-duration: 3s;
-                        //     animation-name: slidein;
-                        //   @keyframes slidein {
-                        //     from {
-                        //       margin-left: 66%;
-                        //       width: 20%;
-                        //     }
-                          
-                        //     to {
-                        //       margin-left: 0%;
-                        //       width: 20%;
-                        //     }
-                        //   }
-
-
-                        // ESSAI keyframe
-                            animation: slidein 1s ease-in-out 0s 1 normal forwards;
-                          @keyframes slidein {
-                            0% {
-                                width: 0%;
-                                // right: 5%;
-                                // transform-origin: end;
-                            }
-                            100% {
-                                width: 18%;
-                                // right: 18%;
-                                // transform-origin: end;
-                            }
-                          }
-
-
-
-                        // animation-duration: 3s;
-                        // animation-name: slidein;
-                        // animation-iteration-count: infinite;
-                        // animation-direction: alternate;
-
-                            
-                        // EESAIS TRANSFORM
-                            transform: translateX(0px);
-                            transition: all 1s;
-                            // transition: slidein 3s infinite;
-                            // animation-duration: 3s;
-                            // animation-name: slidein;
-                            // animation-iteration-count: infinite;
-                            // animation-direction: alternate;
-                        }
-                    & i{
-                        background-color: $primary_bright_color;
-                        border-radius: $standard;
-                        padding: 0.2rem;
-                        color: #a9e0d1;
-                        &:hover{
-                            transform: rotate(1turn);
-                            transition: all 1s;
-                        }
-                    }
-                }
-            }
-
-        }   
     }
 }
-.container{
-    display: flex;
-    justify-content: center;
-}
-.button{
-    background-color: purple;
-    color: yellow;
-    border-radius: 1rem;
-    padding: 1rem;
-    width: 60%;
-    margin: 1rem;
-    text-align: center;
-    transform: scale(1);
-    transition: transform 400ms;
-    transition-delay: 400ms;
-        &:hover{
-            transform: scale(1.15);
+// .container{
+//     display: flex;
+//     justify-content: center;
+// }
+// .button{
+//     background-color: purple;
+//     color: yellow;
+//     border-radius: 1rem;
+//     padding: 1rem;
+//     width: 60%;
+//     margin: 1rem;
+//     text-align: center;
+//     transform: scale(1);
+//     transition: transform 400ms;
+//     transition-delay: 400ms;
+//         &:hover{
+//             transform: scale(1.15);
             
+//         }
+// }
+.menu__description-card{
+    width: 100%;
+    margin: 1rem 0;
+    box-shadow: 0 5px 11px 0 rgb(124, 122, 122);
+    border-radius: 1rem;
+    display: flex;
+        &-details{
+            padding-left: 1rem;
+            width: 80%;
+            transition: .8s all ease-in-out;
+                & h4{
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    margin-bottom: 0;
+                }
+                & p{
+                    overflow:visible;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    margin-top: 0.5rem;
+                }
+        }
+        &:hover .card-right .container-check{
+            transform: translateX(0);
+        }
+        &:hover .card-right .card-price{
+            transform: translateX(0);
+        }
+        &:hover .menu__description-card-details{
+            width: 70%;
+            // width: 49%;
+        }
+        &:hover .menu__description-card-details p, h4{
+            overflow: hidden;
+            // white-space: nowrap;
+            // text-overflow: ellipsis;
+            // margin-top: 0.5rem;
+        }
+        &:hover .card-right{
+            width: 30%;
+            // width: 51%;
+        }
+        &:hover .card-right .container-check .check i{
+            animation: spin 1s;
+        }
+        @keyframes spin {
+            from {
+        transform: rotateZ(0);
+            }
+    
+            to {
+        transform: rotateZ(720deg);
+            }
+        }
+        // .menu__description-card-details{
+        //     padding-left: 1rem;
+        //     width: 65%;
+        //     transition: .8s all ease-in-out;
+        // }
+        .card-right{
+            width: 20%;
+            // background-color: coral;
+            display: flex;
+            align-items: end;
+            overflow: hidden;
+            transition: .8s all ease-in-out;
+
+        }
+        .card-price{
+            transform: translateX(100%);
+            transition: .8s all ease-in-out;
+        }
+        .container-check{
+            width: 100%;
+            display: flex;
+            background-color: #a9e0d1;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+            border-radius: 0rem 1rem 1rem Orem;
+            transform: translateX(100%);
+            transition: .8s all ease-in-out;
+            border-radius: 0rem 1rem 1rem 0rem;
+        }
+        i{
+            border-radius: 1rem;
+            background-color: white;
+            padding: .3rem;
+            color: #a9e0d1;
         }
 }
+
 
 
 
 // CORRECTION CARTES MENU
-.container-card{
-    background-color: #fff;
-    width: 80%;
-    display: flex;
-    box-shadow: 0 5px 11px 0 #b4b4b4;
-    margin: 2rem 1rem;
-    border-radius: 0rem 1rem 1rem 0rem;
+// .container-card{
+//     background-color: #fff;
+//     width: 80%;
+//     display: flex;
+//     box-shadow: 0 5px 11px 0 #b4b4b4;
+//     margin: 2rem 1rem;
+//     border-radius: 0rem 1rem 1rem 0rem;
 
-    .card-left{
-        width: 65%;
-        background-color: #b3aef8;
+//     .card-left{
+//         width: 65%;
+//         background-color: #b3aef8;
 
-        p{
-            font-weight: bold;
-        }
-        p,.card-description{
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            // POINTILLES AU RETRECISSEMENT DE LA DIV
-            text-overflow: ellipsis;
+//         p{
+//             font-weight: bold;
+//         }
+//         p,.card-description{
+//             width: 100%;
+//             overflow: hidden;
+//             white-space: nowrap;
+//             // POINTILLES AU RETRECISSEMENT DE LA DIV
+//             text-overflow: ellipsis;
     
-        }
-    }
+//         }
+//     }
 
-    .card-right{
-        display: flex;
-        align-items: flex-end;
-        width: 35%;
-        overflow: hidden;
-        background-color: #fabaf5;
-        // background-color: #b3aef8;
-        border-radius: 0rem 1rem 1rem 0rem;
+//     .card-right{
+//         display: flex;
+//         align-items: flex-end;
+//         width: 35%;
+//         overflow: hidden;
+//         background-color: #fabaf5;
+//         // background-color: #b3aef8;
+//         border-radius: 0rem 1rem 1rem 0rem;
 
 
-        .card-price{
-            transition: 1s ease-in-out;
-            transform: translateX(100%);
-        }
+//         .card-price{
+//             transition: 1s ease-in-out;
+//             transform: translateX(100%);
+//         }
 
-        .card-container-bar{
-            background-color: #96e0ce;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 0 8px  8px 0;
-            transform: translateX(100%);
-            transition: 1s ease-in-out;
+//         .card-container-bar{
+//             background-color: #96e0ce;
+//             width: 100%;
+//             height: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             border-radius: 0 8px  8px 0;
+//             transform: translateX(100%);
+//             transition: 1s ease-in-out;
 
-            .card-container-check{
-                i{
-                    color:#fff;
-                }
-            }
-        }
-    }
+//             .card-container-check{
+//                 i{
+//                     color:#fff;
+//                 }
+//             }
+//         }
+//     }
 
-    &:hover .card-right .card-container-bar{
-        transform: translateX(0);
-    }
+//     &:hover .card-right .card-container-bar{
+//         transform: translateX(0);
+//     }
 
-    &:hover .card-left p, &:hover .card-left .card-description{
-        transition: 1s ease-in-out;
-        width: 90%;
-    }
+//     &:hover .card-left p, &:hover .card-left .card-description{
+//         transition: 1s ease-in-out;
+//         width: 90%;
+//     }
 
-    &:hover .card-right .card-price{
-        transform: translateX(0);
-    }
+//     &:hover .card-right .card-price{
+//         transform: translateX(0);
+//     }
 
-    &:hover i{
-        animation: spin 1s infinite;
-    }
-}
+//     &:hover i{
+//         animation: spin 1s infinite;
+//     }
+// }
 
-@keyframes spin {
-    from {
-        transform: rotateZ(0);
-      }
+// @keyframes spin {
+//     from {
+//         transform: rotateZ(0);
+//       }
     
-      to {
-        transform: rotateZ(360deg);
-      }
-}
+//       to {
+//         transform: rotateZ(360deg);
+//       }
+// }
