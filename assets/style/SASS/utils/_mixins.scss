@@ -18,3 +18,23 @@
     justify-content: space-around;
     align-items: center;
 }
+
+// MEDIAQUERIES (MOBILE FIRST)
+$breakpoints: (
+    tablette: 481px,
+    desktop: 1025px
+);
+    // TABLETTE
+    @mixin tablette {
+        @media screen and (min-width: map-get($breakpoints, tablette)){
+            @content;
+        }
+      }
+
+    // ORDINATEUR
+    @mixin desktop {
+        @media screen and (min-width: map-get($breakpoints, desktop)){
+            @content;
+        }
+      }
+

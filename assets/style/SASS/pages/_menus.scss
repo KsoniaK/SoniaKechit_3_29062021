@@ -1,11 +1,34 @@
 //MAIN DE LA PAGE MENUS
-main{
-    @include border(orange)
-}
 .illustration{
-    @include border(hotpink);
+    @include tablette{
+        height: 50vh;
+    }
+    @include desktop{
+        height: 50vh;
+    }
     & img{
-        width: 100%
+        width: 100%;
+        @include tablette{
+            object-fit: cover;
+            height: 50vh;
+        }
+        @include desktop{
+            object-fit: cover;
+            height: 50vh;
+        }
+    }
+    &__image_portrait{
+        height: 38vh;
+        object-fit: cover;
+        width: 100%;
+        @include tablette{
+            object-fit: cover;
+            height: 50vh;
+        }
+        @include desktop{
+            object-fit: cover;
+            height: 50vh;
+        }
     }
 }
 .position{
@@ -15,6 +38,12 @@ main{
     background-color: #f6f6f6;
     position: absolute;
     top: 44%;
+    @include tablette{
+        top: 55%;
+    }
+    @include desktop{
+        top: 55%;
+    }
 }
 .menu{
     @include border(green);
@@ -22,6 +51,17 @@ main{
     padding: $standard;
     position: relative;
     padding-top: $nul;
+    &__container-desktop{
+        @include desktop{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    & .apparition_un, .apparition_deux, .apparition_trois{
+        @include desktop{
+            width: 32%;
+        }
+    }
     & button{
         margin-top: 3rem;
         & a{
@@ -34,47 +74,42 @@ main{
     }
     &__description{
         width: 100%;
-        // @include border (brown);
         &-titre{
             & h3{
                 margin-bottom: $nul;
                 font-weight: normal;
+                @include desktop{
+                    text-align: center;
+                }
+                @include tablette{
+                    text-align: center;
+                }
             }
+        }
+        &-titre{
+            position: relative;
         }
         &-titre hr{
             border: none;
             height: 4px;
             background-color: #a9e0d1;
             width: 15%;
-            position: relative;
-            right: 9rem;
+            position: absolute;
+            left: 0%;
+            @include tablette{
+                right: 0;
+            }
+            @include desktop{
+                right: 0;
+            }
+
         }
     }
 }
-// .container{
-//     display: flex;
-//     justify-content: center;
-// }
-// .button{
-//     background-color: purple;
-//     color: yellow;
-//     border-radius: 1rem;
-//     padding: 1rem;
-//     width: 60%;
-//     margin: 1rem;
-//     text-align: center;
-//     transform: scale(1);
-//     transition: transform 400ms;
-//     transition-delay: 400ms;
-//         &:hover{
-//             transform: scale(1.15);
-            
-//         }
-// }
 .menu__description-card{
     width: 100%;
     margin: 1rem 0;
-    box-shadow: 0 5px 11px 0 rgb(124, 122, 122);
+    box-shadow: 0 5px 8px 0 #ddd8d8;
     border-radius: 1rem;
     display: flex;
         &-details{
@@ -82,13 +117,10 @@ main{
             width: 80%;
             transition: .8s all ease-in-out;
                 & h4{
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
                     margin-bottom: 0;
                 }
                 & p{
-                    overflow:visible;
+                    overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     margin-top: 0.5rem;
@@ -102,17 +134,12 @@ main{
         }
         &:hover .menu__description-card-details{
             width: 70%;
-            // width: 49%;
         }
         &:hover .menu__description-card-details p, h4{
             overflow: hidden;
-            // white-space: nowrap;
-            // text-overflow: ellipsis;
-            // margin-top: 0.5rem;
         }
         &:hover .card-right{
             width: 30%;
-            // width: 51%;
         }
         &:hover .card-right .container-check .check i{
             animation: spin 1s;
@@ -121,24 +148,16 @@ main{
             from {
         transform: rotateZ(0);
             }
-    
             to {
         transform: rotateZ(720deg);
             }
         }
-        // .menu__description-card-details{
-        //     padding-left: 1rem;
-        //     width: 65%;
-        //     transition: .8s all ease-in-out;
-        // }
         .card-right{
             width: 20%;
-            // background-color: coral;
             display: flex;
             align-items: end;
             overflow: hidden;
             transition: .8s all ease-in-out;
-
         }
         .card-price{
             transform: translateX(100%);
@@ -163,94 +182,3 @@ main{
             color: #a9e0d1;
         }
 }
-
-
-
-
-// CORRECTION CARTES MENU
-// .container-card{
-//     background-color: #fff;
-//     width: 80%;
-//     display: flex;
-//     box-shadow: 0 5px 11px 0 #b4b4b4;
-//     margin: 2rem 1rem;
-//     border-radius: 0rem 1rem 1rem 0rem;
-
-//     .card-left{
-//         width: 65%;
-//         background-color: #b3aef8;
-
-//         p{
-//             font-weight: bold;
-//         }
-//         p,.card-description{
-//             width: 100%;
-//             overflow: hidden;
-//             white-space: nowrap;
-//             // POINTILLES AU RETRECISSEMENT DE LA DIV
-//             text-overflow: ellipsis;
-    
-//         }
-//     }
-
-//     .card-right{
-//         display: flex;
-//         align-items: flex-end;
-//         width: 35%;
-//         overflow: hidden;
-//         background-color: #fabaf5;
-//         // background-color: #b3aef8;
-//         border-radius: 0rem 1rem 1rem 0rem;
-
-
-//         .card-price{
-//             transition: 1s ease-in-out;
-//             transform: translateX(100%);
-//         }
-
-//         .card-container-bar{
-//             background-color: #96e0ce;
-//             width: 100%;
-//             height: 100%;
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             border-radius: 0 8px  8px 0;
-//             transform: translateX(100%);
-//             transition: 1s ease-in-out;
-
-//             .card-container-check{
-//                 i{
-//                     color:#fff;
-//                 }
-//             }
-//         }
-//     }
-
-//     &:hover .card-right .card-container-bar{
-//         transform: translateX(0);
-//     }
-
-//     &:hover .card-left p, &:hover .card-left .card-description{
-//         transition: 1s ease-in-out;
-//         width: 90%;
-//     }
-
-//     &:hover .card-right .card-price{
-//         transform: translateX(0);
-//     }
-
-//     &:hover i{
-//         animation: spin 1s infinite;
-//     }
-// }
-
-// @keyframes spin {
-//     from {
-//         transform: rotateZ(0);
-//       }
-    
-//       to {
-//         transform: rotateZ(360deg);
-//       }
-// }

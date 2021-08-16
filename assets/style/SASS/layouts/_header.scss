@@ -1,17 +1,18 @@
 //HEADER DE LA PAGE D'ACCUEIL
-header{
-    @include border
-}
 .logo{
-    @include border(violet);
     @include DisplayF_justifyCC;
     padding: $standard;
     & img{
         width: 10rem;
+        @include tablette{
+            width: 15rem;
+        }
+        @include desktop{
+            width: 15rem;
+        }
     }
 }
 .localisation{
-    @include border(orange);
     @include DisplayF_justifyCC;
     background-color: $bgc_localisation;
     align-items: center;
@@ -26,12 +27,17 @@ header{
 
 //LE HEADER DES PAGES MENU
 .nav{
-    @include border(purple);
     @include DisplayF_justifyCC;
     padding: $standard;
     align-items: center;
     & img{
         width: 10rem;
+        @include tablette{
+            width: 15rem;
+        }
+        @include desktop{
+            width: 15rem;
+        }
     }
     & i{
         position: relative;

@@ -1,9 +1,5 @@
 //LE MAIN
-main{
-    @include border(red);
-}
 .titres{
-    @include border(grey);
     background-color: $bgc_titres-button-restaurants;
     text-align: center;
     padding: $standard;
@@ -11,20 +7,41 @@ main{
         font-size: 1.5rem;
         margin-bottom: $standard;
         margin-top: 2rem;
+        & br{
+            @include desktop{
+                display: none;
+            }
+        }
     }
     & h2{
         font-size: 1.1rem;
         font-weight: normal;
         color: gray;
         margin-bottom: 2rem;
+        & br{
+            @include desktop{
+                display: none;
+            }
+        }
     }
 }
 //FONCTIONNEMENT
 .fonctionnement{
-    @include border(green);
     padding-bottom: 3rem;
     & h2{
         padding: $standard;
+        @include tablette{
+            text-align: center;
+        }
+        @include desktop{
+            text-align: center;
+        }
+    }
+    &__container-desktop{
+        @include desktop{
+        display: flex;
+        justify-content: space-around;
+        }
     }
     &__etapes{
         display: flex;
@@ -34,8 +51,14 @@ main{
         align-items: center;
         @include box_shadow;
         height: 10vh;
+        @include desktop{
+            width: 30%;
+        }
         &:hover{
             background-color: #f4edfe;
+        }
+        &:hover i{
+            color: #8b59d5;
         }
         & span{
             @include DisplayF_justifyCC;
@@ -47,27 +70,60 @@ main{
             border-radius: 10rem;
             background-color: #8b59d5;
             color: $primary_bright_color;
+            @include tablette{
+                width: 2rem;
+                height: 2rem; 
+            }
+            @include desktop{
+                width: 2.5rem;
+                height: 2.5rem; 
+            }
         }
         & i{
             margin-right: 1.5rem;
             color: gray;
-            &:hover{
-                color: #8b59d5;
+            @include tablette{
+                font-size: 1.5rem;
+            }
+            @include desktop{
+                font-size: 1.5rem;
             }
         }
     }
 }
 //RESTAURANTS
 .restaurants{
-    @include border(lightpink);
     background-color: $bgc_titres-button-restaurants;
     padding-bottom: 3rem;
+    &__container-desktop{
+            @include desktop{
+        display: flex;
+        justify-content: space-around;
+    }
+    @include tablette{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        }
+    }
     & a{
         text-decoration: none;
         color: $primary_dark_color;
+        @include tablette{
+            width: 50%;
+        }
+        @include desktop{
+            width: 45%;
+        }
     }
     & h2{
         padding: $standard;
+        @include tablette{
+            text-align: center;
+        }
+        @include desktop{
+            text-align: center;
+        }
     }
     &__carte{
         position: relative;
@@ -75,6 +131,9 @@ main{
         background-color: $primary_bright_color;
         margin: $standard;
         @include box_shadow;
+        @include desktop{
+            width: 100%;
+        }
         &-img img{
             width: 100%;
             border-radius: 1rem 1rem 0rem 0rem;
@@ -82,12 +141,15 @@ main{
             object-fit: cover;
         }
         .restaurants__carte-img-nouveaute{
-            width: 25%;
+            width: 30%;
             height: 4vh;
             top: 5%;
             right: 3%;
             position: absolute;
             border-radius: 0;
+            @include desktop{
+                width: 18%;
+            }
         }
         &-nom{
             display: flex;

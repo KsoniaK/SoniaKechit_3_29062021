@@ -1,10 +1,10 @@
 //BOUTON PAGE ACCUEIL
 button{
-    @include border(yellow);
+    border: none;
     display: block;
     margin: auto;
     height: 7vh;
-    width: 60%;
+    width: 70%;
     @include box_shadow;
     border-radius: 2rem;
     font-size: .9rem;
@@ -14,6 +14,12 @@ button{
     background: $bgc_button_hover;
     position: relative;
     z-index: 0;
+    @include tablette{
+        width: 45%;
+    }
+    @include desktop{
+        width: 25%;
+    }
     &:hover{
         &::after{
             opacity: 1;
