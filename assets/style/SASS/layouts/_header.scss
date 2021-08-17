@@ -44,5 +44,28 @@
         position: relative;
         right: 4rem;
     }
+    .far.fa-arrow-alt-circle-left{
+        display: none;
+        @include desktop{
+            display: inline-block;
+            font-size: 2rem;
+            color: #da79d5;
+        }
+        @include tablette{
+            display: inline-block;
+            font-size: 2rem;
+            color: #da79d5;
+        }
+    }
+    @include desktop{
+        .fas.fa-arrow-left{
+            display: none;
+        }
+    }
+    @include tablette{
+        .fas.fa-arrow-left{
+            display: none;
+        }
+    }
 }
 

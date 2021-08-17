@@ -186,6 +186,24 @@ button {
     color: black;
     position: relative;
     right: 4rem; }
+  .nav .far.fa-arrow-alt-circle-left {
+    display: none; }
+    @media screen and (min-width: 1025px) {
+      .nav .far.fa-arrow-alt-circle-left {
+        display: inline-block;
+        font-size: 2rem;
+        color: #da79d5; } }
+    @media screen and (min-width: 481px) {
+      .nav .far.fa-arrow-alt-circle-left {
+        display: inline-block;
+        font-size: 2rem;
+        color: #da79d5; } }
+  @media screen and (min-width: 1025px) {
+    .nav .fas.fa-arrow-left {
+      display: none; } }
+  @media screen and (min-width: 481px) {
+    .nav .fas.fa-arrow-left {
+      display: none; } }
 
 footer {
   background-color: #353535;
@@ -442,6 +460,11 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center; }
+    @media screen and (min-width: 1025px) {
+      .menu__titre {
+        justify-content: center; } }
+    .menu__titre h2 {
+      margin: 1rem; }
   .menu__description {
     width: 100%; }
     .menu__description-titre h3 {

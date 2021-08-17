@@ -71,6 +71,12 @@
     }
     &__titre{
         @include DF_JCC_AIC;
+        @include desktop{
+            justify-content: center;
+        }
+        & h2{
+            margin: 1rem;
+        }
     }
     &__description{
         width: 100%;
