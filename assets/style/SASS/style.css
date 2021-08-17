@@ -182,6 +182,7 @@ button {
       .nav img {
         width: 15rem; } }
   .nav i {
+    color: black;
     position: relative;
     right: 4rem; }
 
@@ -502,10 +503,11 @@ footer {
   .menu__description-card .card-right {
     width: 20%;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     overflow: hidden;
     transition: .8s all ease-in-out; }
   .menu__description-card .card-price {
+    font-weight: bold;
     transform: translateX(100%);
     transition: .8s all ease-in-out; }
   .menu__description-card .container-check {
