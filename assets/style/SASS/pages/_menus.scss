@@ -7,7 +7,7 @@
         height: 50vh;
     }
     & img{
-        width: 100%;
+        width: percentage($number: 1);
         @include tablette{
             object-fit: cover;
             height: 50vh;
@@ -20,7 +20,7 @@
     &__image_portrait{
         height: 38vh;
         object-fit: cover;
-        width: 100%;
+        width: percentage($number: 1);
         @include tablette{
             object-fit: cover;
             height: 50vh;
@@ -33,159 +33,81 @@
 }
 .position{
     border-radius: 2rem 2rem 0rem 0rem;
-    width: 100%;
+    width: percentage($number: 1);
     height: 10vh;
     background-color: #f6f6f6;
     position: absolute;
-    top: 44%;
+    top: percentage($number: 0.44);
     @include tablette{
-        top: 55%;
+        top: percentage($number: 0.55);
     }
     @include desktop{
-        top: 55%;
+        top: percentage($number: 0.55);
     }
 }
 .menu{
     background-color: $bgc_titres-button-restaurants;
-    padding: $standard;
+    padding: $remStandard;
     position: relative;
-    padding-top: $nul;
+    padding-top: $null;
     &__container-desktop{
         @include desktop{
-            display: flex;
-            justify-content: space-around;
+            @include DF_JCSA;
         }
     }
     & .apparition_un, .apparition_deux, .apparition_trois{
         @include desktop{
-            width: 32%;
+            width: percentage($number: 0.32);
         }
     }
     & button{
-        margin-top: 3rem;
+        margin-top: $remStandard * 3;
         & a{
             text-decoration: none;
             color: $primary_bright_color;
         }
     }
     &__titre{
-        @include DF_JCC_AIC;
+        @include DF_JCSA_AIC;
         @include desktop{
-            justify-content: center;
+            justify-content: $center;
         }
         & h2{
-            margin: 1rem;
+            margin: $remStandard;
         }
     }
     &__description{
-        width: 100%;
+        width: percentage($number: 1);
         &-titre{
             & h3{
-                margin-bottom: $nul;
+                margin-bottom: $null;
                 font-weight: normal;
                 @include desktop{
-                    text-align: center;
+                    text-align: $center;
                 }
                 @include tablette{
-                    text-align: center;
+                    text-align: $center;
                 }
             }
         }
         &-titre{
-            margin-top: 2rem;
+            margin-top: $remStandard * 2;
             position: relative;
         }
         &-titre hr{
             border: none;
             height: 4px;
-            background-color: #a9e0d1;
-            width: 15%;
+            background-color: $tertiary_color;
+            width: percentage($number: 0.15);
             position: absolute;
-            left: 0%;
+            left: percentage($number: 0);
             @include tablette{
-                right: 0;
+                right: $null;
             }
             @include desktop{
-                right: 0;
+                right: $null;
             }
 
         }
     }
-}
-.menu__description-card{
-    width: 100%;
-    margin: 1rem 0;
-    box-shadow: 0 5px 8px 0 #ddd8d8;
-    border-radius: 1rem;
-    display: flex;
-        &-details{
-            padding-left: 1rem;
-            width: 80%;
-            transition: .8s all ease-in-out;
-                & h4{
-                    margin-bottom: 0;
-                }
-                & p{
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    margin-top: 0.5rem;
-                }
-        }
-        &:hover .card-right .container-check{
-            transform: translateX(0);
-        }
-        &:hover .card-right .card-price{
-            transform: translateX(0);
-        }
-        &:hover .menu__description-card-details{
-            width: 70%;
-        }
-        &:hover .menu__description-card-details p, h4{
-            overflow: hidden;
-        }
-        &:hover .card-right{
-            width: 30%;
-        }
-        &:hover .card-right .container-check .check i{
-            animation: spin 1s;
-        }
-        @keyframes spin {
-            from {
-        transform: rotateZ(0);
-            }
-            to {
-        transform: rotateZ(720deg);
-            }
-        }
-        .card-right{
-            width: 20%;
-            display: flex;
-            align-items: flex-end;
-            overflow: hidden;
-            transition: .8s all ease-in-out;
-        }
-        .card-price{
-            font-weight: bold;
-            transform: translateX(100%);
-            transition: .8s all ease-in-out;
-        }
-        .container-check{
-            width: 100%;
-            display: flex;
-            background-color: #a9e0d1;
-            justify-content: center;
-            height: 100%;
-            align-items: center;
-            border-radius: 0rem 1rem 1rem Orem;
-            transform: translateX(100%);
-            transition: .8s all ease-in-out;
-            border-radius: 0rem 1rem 1rem 0rem;
-        }
-        i{
-            border-radius: 1rem;
-            background-color: white;
-            padding: .3rem;
-            color: #a9e0d1;
-        }
 }

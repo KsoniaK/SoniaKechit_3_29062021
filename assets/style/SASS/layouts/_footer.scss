@@ -3,11 +3,10 @@ footer{
     background-color: $bgc_footer;
     padding: 1.5rem;
     @include tablette{
-        display: flex;
-        justify-content: space-around;
+        @include DF_JCSA;
     }
     & p{
-        margin: $nul
+        margin: $null
     }
     .aligner{
         padding-left: 0.4rem;
@@ -15,11 +14,11 @@ footer{
 }
 .logo_footer{
     @include desktop{
-        display: flex;
+        display: $dFlex;
     }
     & img{
-        margin-bottom: 1rem;
-        width: 7rem;
+        margin-bottom: $remStandard;
+        width: $remStandard * 7;
         filter: invert(100%) sepia(0%) saturate(7486%) hue-rotate(122deg) brightness(109%) contrast(102%);
         @include desktop{
             filter: invert(96%) sepia(7%) saturate(1189%) hue-rotate(94deg) brightness(91%) contrast(92%);
@@ -32,19 +31,19 @@ footer{
 //MENTIONS
 .mentions{
     @include desktop{
-        text-align: center;
+        text-align: $center;
     }
     & a{
         text-decoration: none;
         color: $primary_bright_color;
     }
     &__emoticone{
-        display: flex;
-        align-items: center;
-        margin-bottom: .5rem;
+        display: $dFlex;
+        align-items: $center;
+        margin-bottom: $remStandard / 2;
         & i{
             color: $primary_bright_color;
-            padding-right: $standard;
+            padding-right: $remStandard;
         }
     }
     &__sans-emoticone a{
@@ -52,7 +51,7 @@ footer{
         color: $primary_bright_color;
     }
     &__sans-emoticone p{
-        margin-bottom: .5rem;
+        margin-bottom: $remStandard / 2;
     }
 }
 

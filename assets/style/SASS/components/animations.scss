@@ -1,33 +1,31 @@
 // LOADING SPINNER
 .lds-circle {
-  width: 100%;
+  width: percentage($number: 1);
   height: 100vh;
   position: fixed;
-   z-index: 1;
+  z-index: $standard;
   animation: lds-circle-bgc 4s ease-in-out 0s 1 normal forwards;
   &__contain {
-    display: flex;
-    justify-content: center;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    background: linear-gradient(#da79d5, #9e61d4);
+    @include DF_JCC;
+    width: $pxStandard * 64;
+    height: $pxStandard * 64;
+    margin: $pxStandard * 8;
+    border-radius: percentage($number: 0.5);
+    background: linear-gradient($primary_color, $secondary_color);
     animation: lds-circle 5s cubic-bezier(0.2, 0.5, 0.8, 1);
     position: relative;
-    top: 15%;
-    left: 38%;
+    top: percentage($number: 0.15);
+    left: percentage($number: 0.38);
     @include tablette{
-      left: 45%;
-      top: 50%
+      left: percentage($number: 0.45);
+      top: percentage($number: 0.5);
     }
     @include desktop{
-      left: 48%;
-      top: 50%
+      left: percentage($number: 0.48);
+      top: percentage($number: 0.5);
     }
         &-img{
-          display: flex;
-          justify-content: center;
+          @include DF_JCC;
           }
       }
   }
@@ -43,17 +41,17 @@
 
   @keyframes lds-circle-bgc {
     0% {
-      background-color: #9e61d4;
-      opacity: 1;
+      background-color: $secondary_color;
+      opacity: $standard;
     }
     50% {
-      z-index: 1;
-      background-color: #9e61d4;
+      z-index: $standard;
+      background-color: $secondary_color;
     }
     100% {
       z-index: -1;
-      opacity: 0;
-      background-color: #9e61d4;
+      opacity: $null;
+      background-color: $secondary_color;
     }
   }
 
@@ -61,34 +59,34 @@
         .restaurants__carte-favoris{
           // ICI PAS INDISPENSABLE MAIS LE METTRE POUR RAPPEL
           position: relative;
-          display: flex;
-          align-items: center;
+          display: $dFlex;
+          align-items: $center;
           .similar{
-              font-size: 25px;
+              font-size: $pxStandard * 25;
               // ON SUPERPOSE LES 2 COEURS. DIV PARENT = restaurants__carte-favoris
               position: absolute;
-              right: 0px;
-              top: 10px;
+              right: $pxStandard * 15;
+              top: $pxStandard * 10;
               color: grey;
           }
           &:hover {
               .plein{
-                  opacity: 1;
+                  opacity: $standard;
                   // AXE Y (HAUT/BAS)
-                  transform: translateY(0);
+                  transform: translateY($null);
                   // ALL POUR TOUS LES EFFETS APPLIQUES
                   transition: all 1s;
               }
               .vide{
-                      opacity: 0;
+                      opacity: $null;
                       // ON JOUE SUR LA PROPRIETE OPACITE
                       transition: opacity 0.3s ;
                   }
           }
           .plein{
               transition: all 1s;
-              background: linear-gradient(#da79d5, #9e61d4);
-              opacity: 0;
+              background: $bgc_button_hover;
+              opacity: $null;
               transform: translateY(15px);
               background-clip: text;
               color: transparent;
@@ -97,24 +95,100 @@
           }
       }
 
-  
+// VALIDATION MENU DANS PANIER
+.menu__description-card{
+  width: percentage($number: 1);
+  margin: 1rem 0;
+  box-shadow: 0 5px 8px 0 #ddd8d8;
+  border-radius: $remStandard;
+  display: $dFlex;
+      &-details{
+          padding-left: $remStandard;
+          width: percentage($number: 0.8);
+          transition: .8s all ease-in-out;
+              & h4{
+                  margin-bottom: $null;
+              }
+              & p{
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  margin-top: 0.5rem;
+              }
+      }
+      &:hover .card-right .container-check{
+          transform: translateX(0);
+      }
+      &:hover .card-right .card-price{
+          transform: translateX(0);
+      }
+      &:hover .menu__description-card-details{
+          width: percentage($number: 0.7);
+      }
+      &:hover .menu__description-card-details p, h4{
+          overflow: hidden;
+      }
+      &:hover .card-right{
+          width: percentage($number: 0.3);
+      }
+      &:hover .card-right .container-check .check i{
+          animation: spin 1s;
+      }
+      @keyframes spin {
+          from {
+      transform: rotateZ(0);
+          }
+          to {
+      transform: rotateZ(720deg);
+          }
+      }
+      .card-right{
+          width: percentage($number: 0.2);
+          display: $dFlex;
+          align-items: flex-end;
+          overflow: hidden;
+          transition: .8s all ease-in-out;
+      }
+      .card-price{
+          font-weight: bold;
+          transform: translateX(100%);
+          transition: .8s all ease-in-out;
+      }
+      .container-check{
+          width: percentage($number: 1);
+          @include DF_JCSA_AIC;
+          background-color: $tertiary_color;
+          height: percentage($number: 1);
+          border-radius: 0rem 1rem 1rem Orem;
+          transform: translateX(100%);
+          transition: .8s all ease-in-out;
+          border-radius: 0rem 1rem 1rem 0rem;
+      }
+      i{
+          border-radius: $remStandard;
+          background-color:$primary_bright_color;
+          padding: .3rem;
+          color: $tertiary_color;
+      }
+}
 
 // APPARITION PROGRESSIVE ENTREE + PLAT + DESSERT PAGES MENU
 .apparition_un{
-  opacity:0;
+  opacity:$null;
   animation: apparition 0.5s linear forwards 0.3s;
 }
 .apparition_deux{
-  opacity:0;
+  opacity:$null;
   animation: apparition 0.5s linear forwards 0.8s;
 }
 .apparition_trois{
-  opacity:0;
+  opacity:$null;
   animation: apparition 0.5s linear forwards 1.2s;
 }
+
 @keyframes apparition {
- 0%  {opacity:0;}
- 100% {opacity:1;}
+ 0%  {opacity:$null;}
+ 100% {opacity:$standard;}
 }
 
 

@@ -1,60 +1,60 @@
 //HEADER DE LA PAGE D'ACCUEIL
 .logo{
-    @include DisplayF_justifyCC;
-    padding: $standard;
+    @include DF_JCC;
+    padding: $remStandard;
     & img{
-        width: 10rem;
+        width: $remStandard * 10;
         @include tablette{
-            width: 15rem;
+            width: $remStandard * 15;
         }
         @include desktop{
-            width: 15rem;
+            width: $remStandard * 15;
         }
     }
 }
 .localisation{
-    @include DisplayF_justifyCC;
+    @include DF_JCC;
     background-color: $bgc_localisation;
-    align-items: center;
+    align-items: $center;
     box-shadow: 5px 0px 5px gray;
     & p{
         color: #3f3f3f;
     }
     & i{
-        padding-right: $standard;
+        padding-right: $remStandard;
     }
 }
 
 //LE HEADER DES PAGES MENU
 .nav{
-    @include DisplayF_justifyCC;
-    padding: $standard;
-    align-items: center;
+    @include DF_JCC;
+    padding: $remStandard;
+    align-items: $center;
     & img{
-        width: 10rem;
+        width: $remStandard * 10;
         @include tablette{
-            width: 15rem;
+            width: $remStandard * 15;
         }
         @include desktop{
-            width: 15rem;
+            width: $remStandard * 15;
         }
     }
     & i{
-        color: black;
+        color: $primary_dark_color;
         position: relative;
-        right: 4rem;
+        right: $remStandard * 4;
     }
     .far.fa-arrow-alt-circle-left{
         display: none;
         @include desktop{
             display: inline-block;
-            font-size: 2rem;
-            color: #da79d5;
+            font-size: $remStandard * 2;
+            color: $primary_color;
         }
         @include tablette{
             display: inline-block;
-            font-size: 2rem;
-            color: #da79d5;
+            font-size: $remStandard * 2;
+            color: $primary_color;
         }
     }
     @include desktop{

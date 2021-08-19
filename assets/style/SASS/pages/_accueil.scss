@@ -1,12 +1,12 @@
 //LE MAIN
 .titres{
     background-color: $bgc_titres-button-restaurants;
-    text-align: center;
-    padding: $standard;
+    text-align: $center;
+    padding: $remStandard;
     & h1{
         font-size: 1.5rem;
-        margin-bottom: $standard;
-        margin-top: 2rem;
+        margin-bottom: $remStandard;
+        margin-top: $remStandard * 2;
         & br{
             @include desktop{
                 display: none;
@@ -17,7 +17,7 @@
         font-size: 1.1rem;
         font-weight: normal;
         color: gray;
-        margin-bottom: 2rem;
+        margin-bottom: $remStandard * 2;
         & br{
             @include desktop{
                 display: none;
@@ -27,52 +27,51 @@
 }
 //FONCTIONNEMENT
 .fonctionnement{
-    padding-bottom: 3rem;
+    padding-bottom: $remStandard * 3;
     & h2{
-        padding: $standard;
+        padding: $remStandard;
         @include tablette{
-            text-align: center;
+            text-align: $center;
         }
         @include desktop{
-            text-align: center;
+            text-align: $center;
         }
     }
     &__container-desktop{
         @include desktop{
-        display: flex;
-        justify-content: space-around;
+        @include DF_JCSA
         }
     }
     &__etapes{
-        display: flex;
+        display: $dFlex;
         background-color: $bgc_titres-button-restaurants;
-        border-radius: 1rem;
+        border-radius: $remStandard;
         margin: 1.5rem;
-        align-items: center;
+        align-items: $center;
         @include box_shadow;
         height: 10vh;
         @include desktop{
-            width: 30%;
+            width: percentage($number: 0.3);
         }
         &:hover{
             background-color: #f4edfe;
         }
         &:hover i{
-            color: #8b59d5;
+            color: $secondary_color;
         }
         & span{
-            @include DisplayF_justifyCC;
+            @include DF_JCC;
             margin-right: 1.5rem;
             margin-left: -0.5rem;
             width: 1.5rem;
             height: 1.5rem;
-            align-items: center;
-            border-radius: 10rem;
-            background-color: #8b59d5;
+            align-items: $center;
+            border-radius: $remStandard * 10;
+            background-color: $secondary_color;
             color: $primary_bright_color;
             @include tablette{
-                width: 2rem;
-                height: 2rem; 
+                width: $remStandard * 2;
+                height: $remStandard * 2; 
             }
             @include desktop{
                 width: 2.5rem;
@@ -94,15 +93,13 @@
 //RESTAURANTS
 .restaurants{
     background-color: $bgc_titres-button-restaurants;
-    padding-bottom: 3rem;
+    padding-bottom: $remStandard * 3;
     &__container-desktop{
             @include desktop{
-        display: flex;
-        justify-content: space-around;
+                @include DF_JCSA;
     }
     @include tablette{
-        display: flex;
-        justify-content: space-around;
+        @include DF_JCSA;
         flex-wrap: wrap;
         }
     }
@@ -110,60 +107,60 @@
         text-decoration: none;
         color: $primary_dark_color;
         @include tablette{
-            width: 50%;
+            width: percentage($number: 0.5);
         }
         @include desktop{
-            width: 45%;
+            width: percentage($number: 0.45);
         }
     }
     & h2{
-        padding: $standard;
+        padding: $remStandard;
+        padding-top: $remStandard * 2;
         @include tablette{
-            text-align: center;
+            text-align: $center;
         }
         @include desktop{
-            text-align: center;
+            text-align: $center;
         }
     }
     &__carte{
         position: relative;
-        border-radius: $standard;
+        border-radius: $remStandard;
         background-color: $primary_bright_color;
-        margin: $standard;
+        margin: $remStandard;
         @include box_shadow;
         @include desktop{
-            width: 100%;
+            width: percentage($number: 1);
         }
         &-img img{
-            width: 100%;
+            width: percentage($number: 1);
             border-radius: 1rem 1rem 0rem 0rem;
             height: 24vh;
             object-fit: cover;
         }
         .restaurants__carte-img-nouveaute{
-            width: 30%;
+            width: percentage($number: 0.3);
             height: 4vh;
-            top: 5%;
-            right: 3%;
+            top: percentage($number: 0.05);
+            right: percentage($number: 0.03);
             position: absolute;
-            border-radius: 0;
+            border-radius: $null;
             @include desktop{
-                width: 18%;
+                width: percentage($number: 0.18);
             }
         }
         &-nom{
-            display: flex;
-            justify-content: space-between;
+            @include DF_JCSB;
             padding-top: .5rem;
-            padding-left: $standard;
+            padding-left: $remStandard;
             padding-right: $standard;
             & h3{
-                margin: 0;
-                font-size: 1rem;
+                margin: $null;
+                font-size: $remStandard;
             }
             & h4{
                 margin-top: .5rem;
-                margin-bottom: $standard;
+                margin-bottom: $remStandard;
                 font-weight: lighter;
             }
         }

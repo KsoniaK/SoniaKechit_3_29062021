@@ -1,9 +1,21 @@
 //LES VARIABLES
+// LES COULEURS
+$primary_color : #da79d5;
+$secondary_color : #9e61d4;
+$tertiary_color : #a9e0d1;
 $primary_bright_color: white;
 $primary_dark_color: black;
 $bgc_titres-button-restaurants: #f6f6f6;
 $bgc_localisation: #eaeaea;
 $bgc_footer: #353535;
-$standard : 1rem;
-$nul : 0rem;
 $bgc_button_hover : linear-gradient(#da79d5, #9e61d4);
+// LES UNITES DE MESURE
+$null : 0;
+$standard : 1;
+$remStandard : 1rem;
+$remNull : 0rem;
+$pxStandard : 1px;
+$pxNull : 0px;
+// PLACEMENT DES ELEMENTS
+$center: center;
+$dFlex: flex;

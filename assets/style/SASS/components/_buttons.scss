@@ -4,38 +4,38 @@ button{
     display: block;
     margin: auto;
     height: 7vh;
-    width: 70%;
+    width: percentage($number: 0.7);
     @include box_shadow;
-    border-radius: 2rem;
+    border-radius: $remStandard * 2 ;
     font-size: .9rem;
     font-weight: bold;
-    margin-bottom: 3rem;
+    margin-bottom: $remStandard * 3;
     color: $primary_bright_color;
     background: $bgc_button_hover;
     position: relative;
-    z-index: 0;
+    z-index: $null;
     @include tablette{
-        width: 45%;
+        width: percentage($number: 0.45);
     }
     @include desktop{
-        width: 25%;
+        width: percentage($number: 0.25);
     }
     &:hover{
         &::after{
-            opacity: 1;
+            opacity: $standard;
         }
     }
     &::after{
         content: "";
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;  
-        left: 0;
-        background-color: lighten(#da79d5, 5);
+        top: $null;
+        right: $null;
+        bottom: $null;  
+        left: $null;
+        background-color: lighten($primary_color, 5);
         box-shadow: 5px 3px 10px 0px grey;
-        border-radius: 2rem;
-        opacity: 0;
+        border-radius: $remStandard * 2;
+        opacity: $null;
         z-index: -1;
         transition: opacity 250ms;
     }
