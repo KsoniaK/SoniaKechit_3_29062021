@@ -46,7 +46,6 @@
     }
 }
 .menu{
-    @include border(green);
     background-color: $bgc_titres-button-restaurants;
     padding: $standard;
     position: relative;
