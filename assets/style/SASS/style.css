@@ -124,9 +124,10 @@ button {
     background: linear-gradient(#da79d5, #9e61d4);
     opacity: 0;
     transform: translateY(15px);
-    background-clip: text;
+    /* background-clip: text; */
     color: transparent;
-    -webkit-background-clip: text; }
+    -webkit-background-clip: text; 
+  }
 
 .menu__description-card {
   width: 100%;
@@ -179,7 +180,7 @@ button {
     align-items: center;
     background-color: #a9e0d1;
     height: 100%;
-    border-radius: 0rem 1rem 1rem Orem;
+    border-radius: 0rem 1rem 1rem;
     transform: translateX(100%);
     transition: .8s all ease-in-out;
     border-radius: 0rem 1rem 1rem 0rem; }
@@ -448,7 +449,7 @@ footer {
       justify-content: space-between;
       padding-top: .5rem;
       padding-left: 1rem;
-      padding-right: 1; }
+      padding-right: 1rem; }
       .restaurants__carte-nom h3 {
         margin: 0;
         font-size: 1rem; }

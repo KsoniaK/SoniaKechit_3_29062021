@@ -88,7 +88,7 @@
               background: $bgc_button_hover;
               opacity: $null;
               transform: translateY(15px);
-              background-clip: text;
+              // background-clip: text;
               color: transparent;
               -webkit-background-clip: text;
               
@@ -159,7 +159,7 @@
           @include DF_JCSA_AIC;
           background-color: $tertiary_color;
           height: percentage($number: 1);
-          border-radius: 0rem 1rem 1rem Orem;
+          border-radius: 0rem 1rem 1rem;
           transform: translateX(100%);
           transition: .8s all ease-in-out;
           border-radius: 0rem 1rem 1rem 0rem;
