@@ -4,7 +4,14 @@
   height: 100vh;
   position: fixed;
   z-index: $standard;
+  //animation: name, duration, timing-function, delay, iteration-count, direction, fill-mode;
   animation: lds-circle-bgc 4s ease-in-out 0s 1 normal forwards;
+  //none : C'est la valeur par défaut. Les propriétés d'animation ne s'appliqueront à aucun élément avant ou après son exécution.
+  //forwards : L'élément conservera les mêmes propriétés d'animation que la dernière image clé une fois l'animation terminée.
+  //backwards : Cette valeur de propriété est utilisée pour définir l'élément sur la première valeur d'image clé avant de démarrer l'animation.
+  //both : Cette propriété est utilisée pour suivre les règles pour les avants et les arrières.
+  //initial : Cette propriété est utilisée pour définir la propriété à sa valeur par défaut.
+  //inherit : Cette propriété est utilisée pour hériter de cette propriété de son élément parent.
   &__contain {
     @include DF_JCC;
     width: $pxStandard * 64;
@@ -12,6 +19,8 @@
     margin: $pxStandard * 8;
     border-radius: percentage($number: 0.5);
     background: linear-gradient($primary_color, $secondary_color);
+    //La fonction cubic-bezier() permet d'indiquer une progression non linéaire pour les animations et les transitions.
+    //La courbe de Bezier est un outil mathématique qui permet de définir une courbe avec seulement 4 valeurs numériques.
     animation: lds-circle 5s cubic-bezier(0.2, 0.5, 0.8, 1);
     position: relative;
     top: percentage($number: 0.15);
@@ -66,7 +75,7 @@
               // ON SUPERPOSE LES 2 COEURS. DIV PARENT = restaurants__carte-favoris
               position: absolute;
               right: $pxStandard * 15;
-              top: $pxStandard * 10;
+              // top: $pxStandard * 10;
               color: grey;
           }
           &:hover {
@@ -84,12 +93,14 @@
                   }
           }
           .plein{
+            // appliquer une durée de transition d'1s à toutes les transitions
               transition: all 1s;
               background: $bgc_button_hover;
               opacity: $null;
               transform: translateY(15px);
               // background-clip: text;
               color: transparent;
+              // COMPATIBLE CHROME
               -webkit-background-clip: text;
               
           }
@@ -112,6 +123,8 @@
               & p{
                   overflow: hidden;
                   white-space: nowrap;
+                  // La propriété text-overflow définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs.
+                  //Le texte peut être rogné (clipping), afficher une ellipse ('…')
                   text-overflow: ellipsis;
                   margin-top: 0.5rem;
               }

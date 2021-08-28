@@ -110,7 +110,6 @@ button {
     font-size: 25px;
     position: absolute;
     right: 15px;
-    top: 10px;
     color: grey; }
   .restaurants__carte-favoris:hover .plein {
     opacity: 1;
@@ -124,10 +123,8 @@ button {
     background: linear-gradient(#da79d5, #9e61d4);
     opacity: 0;
     transform: translateY(15px);
-    /* background-clip: text; */
     color: transparent;
-    -webkit-background-clip: text; 
-  }
+    -webkit-background-clip: text; }
 
 .menu__description-card {
   width: 100%;
@@ -248,24 +245,6 @@ button {
     color: black;
     position: relative;
     right: 4rem; }
-  .nav .far.fa-arrow-alt-circle-left {
-    display: none; }
-    @media screen and (min-width: 1025px) {
-      .nav .far.fa-arrow-alt-circle-left {
-        display: inline-block;
-        font-size: 2rem;
-        color: #da79d5; } }
-    @media screen and (min-width: 481px) {
-      .nav .far.fa-arrow-alt-circle-left {
-        display: inline-block;
-        font-size: 2rem;
-        color: #da79d5; } }
-  @media screen and (min-width: 1025px) {
-    .nav .fas.fa-arrow-left {
-      display: none; } }
-  @media screen and (min-width: 481px) {
-    .nav .fas.fa-arrow-left {
-      display: none; } }
 
 footer {
   background-color: #353535;
@@ -286,12 +265,6 @@ footer {
   margin-bottom: 1rem;
   width: 7rem;
   filter: invert(100%) sepia(0%) saturate(7486%) hue-rotate(122deg) brightness(109%) contrast(102%); }
-  @media screen and (min-width: 1025px) {
-    .logo_footer img {
-      filter: invert(96%) sepia(7%) saturate(1189%) hue-rotate(94deg) brightness(91%) contrast(92%); } }
-  @media screen and (min-width: 481px) {
-    .logo_footer img {
-      filter: invert(96%) sepia(7%) saturate(1189%) hue-rotate(94deg) brightness(91%) contrast(92%); } }
 
 @media screen and (min-width: 1025px) {
   .mentions {
@@ -524,7 +497,7 @@ footer {
     align-items: center; }
     @media screen and (min-width: 1025px) {
       .menu__titre {
-        justify-content: center; } }
+        justify-content: space-around; } }
     .menu__titre h2 {
       margin: 1rem; }
   .menu__description {

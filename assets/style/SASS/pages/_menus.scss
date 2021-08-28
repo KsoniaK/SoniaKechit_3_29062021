@@ -70,7 +70,7 @@
     &__titre{
         @include DF_JCSA_AIC;
         @include desktop{
-            justify-content: $center;
+            justify-content: space-around;
         }
         & h2{
             margin: $remStandard;

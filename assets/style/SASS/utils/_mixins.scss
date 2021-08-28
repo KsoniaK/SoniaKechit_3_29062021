@@ -24,12 +24,15 @@
 }
 
 // MEDIAQUERIES (MOBILE FIRST)
+// tableau breakpoints
 $breakpoints: (
+    // clef : valeur
     tablette: 481px,
     desktop: 1025px
 );
     // TABLETTE
     @mixin tablette {
+        // Retourne la valeur associée à une clé donnée d’une map.
         @media screen and (min-width: map-get($breakpoints, tablette)){
             @content;
         }
