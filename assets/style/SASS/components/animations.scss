@@ -38,7 +38,6 @@
           }
       }
   }
-  
   @keyframes lds-circle {
     from {
       transform: rotateY(0deg);
@@ -63,7 +62,6 @@
       background-color: $secondary_color;
     }
   }
-
         // COEUR FAVORIS
         .restaurants__carte-favoris{
           // ICI PAS INDISPENSABLE MAIS LE METTRE POUR RAPPEL
@@ -105,7 +103,6 @@
               
           }
       }
-
 // VALIDATION MENU DANS PANIER
 .menu__description-card{
   width: percentage($number: 1);
